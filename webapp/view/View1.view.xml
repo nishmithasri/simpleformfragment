@@ -1,0 +1,66 @@
+<mvc:View controllerName="simpleformfragment.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt">
+    <Page id="page">
+        <content>
+		<tnt:ToolHeader>
+    <MenuButton type="Transparent" icon="sap-icon://menu2">
+	<!-- <menu> -->
+	<Menu>
+	<MenuItem text="{i18n>BusinessPartnerId}"/>
+	<MenuItem text="Company Name"/>
+	<MenuItem text="Email Address"/>
+	<MenuItem text="Web Id"/>
+	<MenuItem text="Phone Numbers"/>
+	</Menu>
+	<!-- </menu> -->
+	</MenuButton>
+    <ToolbarSpacer/>
+    <Text text="BusinessPartner Id "/>
+    <ToolbarSpacer/>
+    </tnt:ToolHeader>
+		
+        <Label text=" {i18n>BusinessPartnerId}" required="true" class="sapUiSmallMarginTop"/>
+        <Input id="idBpId" valueHelpRequest="onVHTrigger" showValueHelp="true" width="30%" class="sapUiSmallMarginTop" submit="onSubmit"/>
+		<VBox justifyContent="Center" alignContent="Center" alignItems="Center">
+		<Button text="OK" press="onDialogOK"/>
+		</VBox>
+        <Panel id="idAddPanel">
+        <VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormDisplay354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="In Details"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="{i18n>City}" />
+                <Input id="idInput1" value="{readModel>/City}" />
+				<!-- <Text id="nameText" text="{SupplierName}" /> -->
+				<Label text="Building" />
+                <Input id="idInput2" value="{readModel>/Building}" />
+				<Label text="Country" />
+                <Input id ="idInput3" value="{readModel>/Country}"/>
+				<Label text="Street"/>
+                <Input id ="idInput4" value="{readModel>/Street}"/>
+				<Label text="PostalCode"/>
+				<Input id ="idInput5" value="{readModel>/PostalCode}"/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+        </Panel>
+        </content>
+    </Page>
+</mvc:View>

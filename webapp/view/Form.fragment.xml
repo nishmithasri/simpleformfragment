@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns:m="sap.m" xmlns:core="sap.ui.core">
+    <m:Dialog title="Partner List">
+        <m:content>
+        <m:SearchField search="onDilaogSearch"/>
+            <m:List items="{/BusinessPartnerSet}" growing="true" growingThreshold="10"
+                itemPress="onPressItem" mode="SingleSelect" selectionChange="SingleSelect">
+                <m:StandardListItem title="{BusinessPartnerID}" type="Active">
+</m:StandardListItem>
+            </m:List>
+        </m:content>
+        <m:buttons>
+            <!-- <m:Button text="OK" press="onDialogOK"/> -->
+             <m:Button text="Cancel" press="onDialogClose"/>
+        </m:buttons>
+    </m:Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,27 @@
+<mvc:View controllerName="simpleformfragment.controller.companyname"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:tnt="sap.tnt">
+    <Page id="">
+        <content>
+		<tnt:ToolHeader>
+    <MenuButton type="Transparent" icon="sap-icon://menu2">
+	<Menu>
+	<MenuItem text="BusinessPartner Id"/>
+	<MenuItem text="Company Name"/>
+	<MenuItem text="Email Address"/>
+	<MenuItem text="Web Id"/>
+	<MenuItem text="Phone Numbers"/>
+	</Menu>
+	</MenuButton>
+    <ToolbarSpacer/>
+    <Text text="BusinessPartner Id "/>
+    <ToolbarSpacer/>
+    </tnt:ToolHeader>
+		
+        
+	
+        
+        </content>
+    </Page>
+</mvc:View>
